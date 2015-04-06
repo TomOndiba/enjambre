@@ -1,0 +1,184 @@
+.left{
+    background-image: url('images/fondo_ferias_2.png');
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+.right{
+    background-image: url('images/fondo_ferias_1.png');
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+
+/*
+    INFORMACION FERIA SUPER BANNER
+*/
+
+.contenedor-informacion-feria{
+    width: 730px;
+    margin:3%;
+    min-height: 450px;
+    overflow: hidden;
+
+}
+.contenido-informacion-feria{
+    width:2300px;
+    height: 100%;
+    position:relative;
+}
+
+.item-informacion-feria{
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 33%;
+}
+
+.cuadro-1{
+    padding: 15px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width:7px;
+    border-color: rgb(255,204,41);
+    background-color: white;
+}
+
+.cuadro-2{
+    padding: 15px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(191,52,68);
+    background-color: white;
+}
+
+.cuadro-3{
+    padding: 15px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(168,207,69);
+    background-color: white;
+}
+
+#info-1{
+    width: 400px;
+
+}
+#info-2{
+    width: 250px;
+    position: relative;
+    left: 410px;
+    top:-50px;
+}
+#info-3{
+    width: 387px;
+    position: relative;
+    top:-90px;
+}
+#info-4{
+    width: 300px;
+    position: relative;
+    left: 300px;
+}
+#info-5{
+    width: 250px;
+    position: relative;
+    left: 300px;
+    top:-100px;
+}
+#info-6{
+    width: 277px;
+    position: relative;
+    top:-40px;
+}
+#info-7{
+    width: 277px;
+    position: relative;
+}
+#info-8{
+    width: 277px;
+    position: relative;
+    top:-40px;
+    left: 300px;
+}
+
+#patrocinadores{
+    width: 650px;
+    height: 130px;
+}
+
+#patrocinadores>ul{
+    height: 130px;
+    max-height: 130px;
+    overflow: hidden;
+    text-align: center;
+    clear: both;
+}
+
+#patrocinadores>ul>li{
+    display: inline-block;
+    vertical-align: top;
+    height: 130px;
+    text-align: center;
+    margin-left:5px;
+    margin-right: 5px;
+}
+
+#patrocinadores>ul>li>div>img{
+    height:  110px; 
+    width: auto;
+}
+
+
+#patrocinadores>ul>li>div>h4{
+    color:black;
+    font-weight: 700;
+}
+
+.item-informacion-feria>div>label{
+    color:black;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.item-informacion-feria>div>p{
+    color:black;
+}
+
+ul.menu-informacion-feria{
+    height: 50px;
+}
+
+ul.menu-informacion-feria>li{
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: rgb(204,110,97);
+}
+#item-1:hover{
+    background-color: rgb(255,204,41);
+}
+
+#item-2:hover{
+    background-color: rgb(191,52,68);
+}
+
+#item-3:hover{
+    background-color: rgb(168,207,69);
+}
+ul.menu-informacion-feria>li:hover{
+    cursor: pointer;
+}
+ul.menu-informacion-feria>li>div{
+    margin-top:10px;
+    margin-left:10px;
+    margin-right: 10px;
+    padding: 10px;
+    color:white;
+    font-size: 16px;
+}
+

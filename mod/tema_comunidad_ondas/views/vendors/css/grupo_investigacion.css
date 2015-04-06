@@ -1,0 +1,11 @@
+.left{
+    background-image: url('images/fondo_grupo_2.png');
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+.right{
+    background-image: url('images/fondo_grupo_1.png');
+    background-size: 100%;
+    background-repeat: repeat;
+}

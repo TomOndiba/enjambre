@@ -1,0 +1,86 @@
+<?php
+
+/**
+ * Elgg session management
+ * Functions to manage logins
+ *
+ * @package Elgg.Core
+ * @subpackage Session
+ */
+/** Elgg magic session */
+global $SESSION;
+
+/**
+ * Return the current logged in user, or NULL if no user is logged in.
+ *
+ * If no user can be found in the current session, a plugin
+ * hook - 'session:get' 'user' to give plugin authors another
+ * way to provide user details to the ACL system without touching the session.
+ *
+ * @return ElggUser
+ */
+function elgg_get_logged_in_user_entity() {
+    global $SESSION;
+
+    if (isset($SESSION)) {
+        return $SESSION['user'];
+    }
+
+    return NULL;
+}
+
+/**
+ * Return the current logged in user by id.
+ *
+ * @see elgg_get_logged_in_user_entity()
+ * @return int
+ */
+function elgg_get_logged_in_user_guid() {
+    $user = elgg_get_logged_in_user_entity();
+    if ($user) {
+        return $user->guid;
+    }
+
+    return 0;
+}
+
+/**
+ * Returns whether or not the user is currently logged in
+ *
+ * @return bool
+ */
+function elgg_is_logged_in() {
+    $user = elgg_get_logged_in_user_entity();
+
+    if ((isset($user)) && ($user instanceof ElggUser) && ($user->guid > 0)) {
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Returns whether or not the user is currently logged in and that they are an admin user.
+ *
+ * @return bool
+ */
+function elgg_is_admin_logged_in() {
+    $user = elgg_get_logged_in_user_entity();
+
+    if ((elgg_is_logged_in()) && $user->isAdmin()) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+/**
+ * Check if the given user has full access.
+ *
+ * @todo: Will always return full access if the user is an admin.
+ *
+ * @param int $user_guid The user to check
+ *
+ * @return bool
+ * @since 1.7.1
+

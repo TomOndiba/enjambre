@@ -1,0 +1,52 @@
+<?php
+$guid_inv = get_input("guid_inv");
+$entities = elgg_get_entities_from_relationship(array(
+    'relationship' => 'tiene_la_bitacora',
+    'relationship_guid' => $guid_inv,
+        ));
+
+$bandera = false;
+foreach ($entities as $entity){
+    if ($entity->description == '1') {
+        $bitacora1 = elgg_view_entity($entity, array('full_view' => true));
+    } else if ($entity->description == '2') {
+        $bitacora2 = elgg_view_entity($entity, array('full_view' => true));
+    } else if ($entity->description == '3') {
+        $bitacora3 = elgg_view_entity($entity, array('full_view' => true));
+          $bandera=true;
+    }
+}
+
+
+$entity=get_entity($guid_inv);
+if(!$bandera && $entity->owner_guid==elgg_get_logged_in_user_guid()){
+    
+    $grupo = elgg_get_relationship_inversa($entity, 'tiene_la_investigacion');
+    $vars = bitacoras_prepare_form_b3_vars($page, $page->parent_guid, $revision, $guid_inv, $grupo[0]->guid);
+    $bitacora3 = elgg_view_form('bitacoras/edit', array(), $vars);
+}
+
+
+
+
+?>
+<div class="menu-bitacoras">
+    <ul>
+        <li id="bitacora-1">Bitácora 1</li>
+        <li id="bitacora-2">Bitácora 2</li>
+        <li id="bitacora-3">Bitácora 3</li>
+    </ul>
+</div>
+<div class="bitacoras">
+    <div id="bitacora1" class="bitacora">
+<?php echo $bitacora1; ?>
+    </div>
+
+    <div id="bitacora2" class="bitacora">
+<?php echo $bitacora2; ?>
+    </div>
+
+    <div id="bitacora3" class="bitacora">
+<?php echo $bitacora3; ?>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+ul.elgg-list{
+
+}
+
+ul.elgg-list>li{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5e5e5;
+    border-radius: 10px;
+    padding: 10px;
+    margin:5px;
+}
+
+.elgg-image{
+    display:inline-block;
+}
+
+.elgg-body{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 20px;
+    width: 87%;
+}
+
+.elgg-subtext{
+    color: grey;
+}
+
+.elgg-body>h3{
+    font-size: 16px;
+    color:black;
+    font-weight: 700;
+}
+
+ul.elgg-menu-entity{
+    width: 100%;
+    text-align: right;
+    width: 100%;
+}
+
+ul.elgg-menu-entity>li{
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+ul.elgg-menu-entity>li>span{
+    display:none;
+}
+
+.elgg-content{
+    background: white;
+    margin:10px;
+    padding:20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5e5e5;
+}
+
+.elgg-image-block{
+    margin-bottom: 20px;
+}
+
+.elgg-output{
+    color:black;
+    text-align: justify;
+}
+
+.bitacora_top-comments, .elgg-comments{
+    background: white;
+    margin:10px;
+    padding:20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5e5e5;
+}
+
+.bitacora_top-comments>form>fieldset>div>label,.elgg-comments>form>fieldset>div>label{
+    display:none;
+}
+
+p{
+    font-weight: 700;
+}
+
+.elgg-output>ul{
+    margin-top:20px;
+}
+
+p>p{
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 400;
+}
+p>span{
+    display: inline-block;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.titulo-list-grupo{
+    
+}
