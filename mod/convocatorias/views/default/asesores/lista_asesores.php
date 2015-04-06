@@ -1,8 +1,9 @@
 <?php
 $convocatoria = new ElggConvocatoria($vars['convocatoria']);
-$options = array('relationship'=> 'asesor_convocatoria',
-        'relationship_guid'=>$convocatoria->guid,
-    'inverse_relationship' => true);
+//$options = array('relationship'=> 'asesor_convocatoria',
+        //'relationship_guid'=>$convocatoria->guid,
+//    'inverse_relationship' => true);
+$options = array('relationship'=> 'asesor_convocatoria');
 $asesores = elgg_get_entities_from_relationship($options);
 ?>
 <div class = "content-coordinacion">
