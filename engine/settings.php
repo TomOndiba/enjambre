@@ -49,7 +49,7 @@ $CONFIG->dbpass = 'elgg2014';
  *
  * @global string $CONFIG->dbname
  */
-$CONFIG->dbname = 'enjambre';
+$CONFIG->dbname = 'enjambre4';
 
 /**
  * The database host.
